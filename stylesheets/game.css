@@ -23,6 +23,7 @@ body {
   border: 2px solid #adda55;
 }
 
+
 .board > div {
 	height: 614px;
 	width: 100px;
@@ -39,6 +40,8 @@ body {
 	border: 3px solid #CC6600;
 }
 
+
+/*button*/
 .board > div > div:last-child {
 	margin-top: 10px;
 	background-color: green;
@@ -51,9 +54,17 @@ body {
 .empty {
   background-color: #DADADA;
   border-radius: 100px;
+
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(1080deg); }
 }
 
 .red  {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: spin;
   background-color: red;
   background-image: url(http://leephogrill.com/wp-content/themes/HDint-BK/images/pho.png);
   background-size: 80px;
@@ -64,6 +75,8 @@ body {
 }
 
 .black  {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: spin;
   background-color: black;
   background-image: url(http://leephogrill.com/wp-content/themes/HDint-BK/images/pho.png);
   background-size: 80px;
@@ -71,6 +84,7 @@ body {
   background-repeat: no-repeat;
   border-radius: 100px;
   border: 1px solid black;
+
 }
 
 #player {
@@ -81,6 +95,22 @@ body {
   font-weight: bold;
 }
 
+#sauce {
+  height: 600px;
+  width: auto;
+  margin-left: -300px;
+  position: fixed;
+  float: left;
+  left: 0px;
+}
+
+#cilantro {
+  height: 600px;
+  width: auto;
+  float: right;
+  position: fixed;
+  right: 0px;
+}
 
 #sauce {
   height: 600px;

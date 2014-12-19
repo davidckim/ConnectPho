@@ -7,7 +7,6 @@ $(document).ready(function() {
   $('.button').on('click', dropPiece);
 });
 
-
 var switchPlayer = function() {
   if (TURN_COUNTER % 2 == 0) {
     CURRENT_PLAYER = ' red'
@@ -45,8 +44,6 @@ $('.button').on('click', function(event) {
 
 
 socket.on('clicked', function (msg) {
-
-
   var selectedColumn = $("." + msg)[0];
   var selectedCell = selectedColumn.children
 
@@ -59,11 +56,10 @@ socket.on('clicked', function (msg) {
       break
     }
   }
-  
-
-// we must call the click, instead of the drop peice function
    
 });
+
+
 
 
 
