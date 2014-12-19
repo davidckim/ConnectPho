@@ -3,8 +3,17 @@ var socket = io();
 TURN_COUNTER = 0
 CURRENT_PLAYER = ' red'
 
+TIMEOUTID = null
+
 $(document).ready(function() {
   $('.button').on('click', dropPiece);
+  $('.clock').FlipClock(10, {
+    countdown: true,
+    clockFace: 'Counter',
+    autoStart: true,
+  });
+  alert("Ready to play?");
+  TIMEOUTID = window.setTimeout(dropPiece, 10000, {timeout:true});
 });
 
 var switchPlayer = function() {
@@ -17,9 +26,16 @@ var switchPlayer = function() {
   game.checkGameOver();
 };
 
-var dropPiece = function() {
 
-  var selectedColumn = this.parentNode;
+var dropPiece = function(timeout) {
+  window.clearTimeout(TIMEOUTID)
+  var selectedColumn
+  if (timeout.timeout) {
+    var buttons = $('.button')
+    selectedColumn = buttons[Math.floor(Math.random()*buttons.length)].parentNode
+  } else {
+    selectedColumn = this.parentNode;
+  };
   var selectedCell = selectedColumn.children
 
   for(i=5; i >= 0; i--) {
@@ -28,10 +44,17 @@ var dropPiece = function() {
       selectedCell[i].className += CURRENT_PLAYER
       TURN_COUNTER++
       switchPlayer();
+
       break
-    }
-  }
-}
+    };
+  };
+  $('.clock').FlipClock(10, {
+    countdown: true,
+    clockFace: 'Counter',
+    autoStart: true,
+  });
+  TIMEOUTID = window.setTimeout(dropPiece, 10000, {timeout:true});
+};
 
 $('.button').on('click', function(event) {
   // pass in string of the column we clicked on
@@ -56,12 +79,10 @@ socket.on('clicked', function (msg) {
       break
     }
   }
-   
+  $('.clock').FlipClock(10, {
+    countdown: true,
+    clockFace: 'Counter',
+    autoStart: true,
+  });
+  TIMEOUTID = window.setTimeout(dropPiece, 10000, {timeout:true});
 });
-
-
-
-
-
-
-

@@ -4,18 +4,21 @@
 <title>CONNECT PH&#7902;</title>
 
 <link rel="stylesheet" type="text/css" href="../stylesheets/game.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/flipclock.css">
 <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
 <link rel="icon" type= "image/x-icon" href="imgs/favicon.ico" />
 <script src="/socket.io/socket.io.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="../js/flipclock.min.js"></script>
 
 </head>
 
 <body>
 
-<div id="title"> CONNECT PH&#7902;</div>
+<div id="title"><div class="clock" style="margin:2em;"></div><p> CONNECT PH&#7902;</p></div>
 <div id="player">PLAYER RED'S TURN!</div>
+
 
 <img id="sauce" src="http://thehotpepper.com/uploads/364dc301a706b3b88045bb06f09631fe.png">
 
@@ -87,10 +90,10 @@
   </div>
 </div>
 
-
 <script src="../js/game.js"></script>
 <script src="../js/controller.js"></script>
-
 </body>
+
+
 
 </html>

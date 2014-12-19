@@ -6,11 +6,19 @@ body {
 }
 
 #title {
-  margin-top: 30px;
-  margin-bottom: -20px;
+  margin-bottom: -80px;
+  margin-top: -10px;
+  margin-left: -190px;
   text-align: center;
   font-size: 50px;
   font-weight: bold;
+}
+
+p {
+  display: inline-block;
+  margin-top: 23px;
+  margin-left: 25px;
+  vertical-align: top;
 }
 
 .board {
@@ -25,29 +33,29 @@ body {
 
 
 .board > div {
-	height: 614px;
-	width: 100px;
-	border: 1px solid #adda55;
-	display: inline-block;
-	float: left;
-	clear: none;
+  height: 614px;
+  width: 100px;
+  border: 1px solid #adda55;
+  display: inline-block;
+  float: left;
+  clear: none;
   vertical-align: top;
 }
 
 .board > div > div {
-	height: 90px;
-	width: 90px;
-	border: 3px solid #CC6600;
+  height: 90px;
+  width: 90px;
+  border: 3px solid #CC6600;
 }
 
 
 /*button*/
 .board > div > div:last-child {
-	margin-top: 10px;
-	background-color: green;
-	border-radius: 100px;
+  margin-top: 10px;
+  background-color: green;
+  border-radius: 100px;
   height: 30px;
-	border: 2px solid lime;
+  border: 2px solid lime;
 
 }
 
@@ -128,7 +136,3 @@ body {
   position: fixed;
   right: 0px;
 }
-
-
-
-
