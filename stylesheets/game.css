@@ -1,0 +1,104 @@
+body {
+  background-image: url();
+  background-color: black;
+  color: orange;
+  font-family: 'Finger Paint', Helvetica;
+}
+
+#title {
+  margin-top: 30px;
+  margin-bottom: -20px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.board {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  margin: 0 auto;
+  height: 614px;
+  width: 714px;
+  border: 2px solid #adda55;
+}
+
+.board > div {
+	height: 614px;
+	width: 100px;
+	border: 1px solid #adda55;
+	display: inline-block;
+	float: left;
+	clear: none;
+  vertical-align: top;
+}
+
+.board > div > div {
+	height: 90px;
+	width: 90px;
+	border: 3px solid #CC6600;
+}
+
+.board > div > div:last-child {
+	margin-top: 10px;
+	background-color: green;
+	border-radius: 100px;
+  height: 30px;
+	border: 2px solid lime;
+
+}
+
+.empty {
+  background-color: #DADADA;
+  border-radius: 100px;
+}
+
+.red  {
+  background-color: red;
+  background-image: url(http://leephogrill.com/wp-content/themes/HDint-BK/images/pho.png);
+  background-size: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+.black  {
+  background-color: black;
+  background-image: url(http://leephogrill.com/wp-content/themes/HDint-BK/images/pho.png);
+  background-size: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+#player {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: lime;
+  font-weight: bold;
+}
+
+
+#sauce {
+  height: 600px;
+  width: auto;
+  margin-left: -300px;
+  position: fixed;
+  float: left;
+  left: 0px;
+}
+
+#cilantro {
+  height: 600px;
+  width: auto;
+  float: right;
+  position: fixed;
+  right: 0px;
+}
+
+
+
+
